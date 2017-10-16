@@ -9,6 +9,17 @@
   </head>
 
   <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><%= link_to 'Home', root_path, class: 'nav-link' %></li>
+            <li class="nav-item"><%= link_to 'References', references_path, class: 'nav-link' %></li>
+            <li class="nav-item"><%= link_to 'Episodes', episodes_path, class: 'nav-link' %></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
