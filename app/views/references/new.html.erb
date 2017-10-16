@@ -1,0 +1,6 @@
+<h1>Create New Reference</h1>
+<%= form_tag("/references", method: "post") do %>
+  <%= label_tag(:name, "Name:") %>
+  <%= text_field_tag(:name) %>
+  <%= submit_tag("Create Reference") %>
+<% end %>
