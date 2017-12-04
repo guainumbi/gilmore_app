@@ -1,3 +1,31 @@
-I'm a reference.
-<%= link_to "Create New Reference", new_reference_path %>
-<%= Reference.all.pluck(:name) %>
+<p id="notice"><%= notice %></p>
+
+<h1>References</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Category</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @references.each do |reference| %>
+      <tr>
+        <td><%= reference.id %></td>
+        <td><%= reference.category %></td>
+        <td><%= reference.name %></td>
+        <td><%= link_to 'Show', reference %></td>
+        <td><%= link_to 'Edit', edit_reference_path(reference) %></td>
+        <td><%= link_to 'Destroy', reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reference', new_reference_path %>
