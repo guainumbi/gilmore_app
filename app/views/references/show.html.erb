@@ -16,5 +16,12 @@
   <%= @reference.name %>
 </p>
 
+<p>
+  <strong>Episodes:</strong>
+  <%= @reference.episodes.each do |episode| %>
+    <% episode.title %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_reference_path(@reference) %> |
 <%= link_to 'Back', references_path %>

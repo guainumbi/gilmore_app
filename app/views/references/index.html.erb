@@ -17,8 +17,7 @@
       <tr>
         <td><%= reference.id %></td>
         <td><%= reference.category %></td>
-        <td><%= reference.name %></td>
-        <td><%= link_to 'Show', reference %></td>
+        <td><%= link_to reference.name, reference %></td>
         <td><%= link_to 'Edit', edit_reference_path(reference) %></td>
         <td><%= link_to 'Destroy', reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
